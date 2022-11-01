@@ -3,7 +3,9 @@ const pg1 = require('./api/CONTENTLISTINGPAGE-PAGE1.json');
 const pg2 = require('./api/CONTENTLISTINGPAGE-PAGE2.json');
 const pg3 = require('./api/CONTENTLISTINGPAGE-PAGE3.json');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
+dotenv.config();
 const app = express();
 app.use(cors()); 
 
