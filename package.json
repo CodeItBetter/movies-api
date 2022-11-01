@@ -97,7 +97,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon server"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "proxy": "http://localhost:7000",
   "keywords": [],
