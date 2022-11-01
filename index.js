@@ -28,6 +28,6 @@ app.get('/api/movies/:pageNum', (req, res) => {
     res.send(result);
 });
 
-const port = process.env.PORT || 7000;
+const PORT = process.env.PORT || 7000;
 
-app.listen(port, () => console.log(`listening to port ${port}`));
+app.listen(PORT, () => console.log(`listening to port ${PORT}`));
