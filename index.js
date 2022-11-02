@@ -1,11 +1,13 @@
 const express = require('express');
-const pg1 = require('./api/CONTENTLISTINGPAGE-PAGE1.json');
-const pg2 = require('./api/CONTENTLISTINGPAGE-PAGE2.json');
-const pg3 = require('./api/CONTENTLISTINGPAGE-PAGE3.json');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
+const pg1 = require('./api/CONTENTLISTINGPAGE-PAGE1.json');
+const pg2 = require('./api/CONTENTLISTINGPAGE-PAGE2.json');
+const pg3 = require('./api/CONTENTLISTINGPAGE-PAGE3.json');
+
 dotenv.config();
+
 const app = express();
 app.use(cors()); 
 
@@ -28,6 +30,6 @@ app.get('/api/movies/:pageNum', (req, res) => {
     res.send(result);
 });
 
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 9000;
 
 app.listen(PORT, () => console.log(`listening to port ${PORT}`));
